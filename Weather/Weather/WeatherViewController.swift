@@ -8,6 +8,14 @@
 import UIKit
 
 class WeatherViewController: UIViewController {
+    let cities: [String] = ["Seoul", "Pari", "NewYork", "Tokyo"]
+    let weather: [String] = ["sun.max.fill", "cloud.fill", "wind", "cloud.sun.rain.fill"]
+    let temperature: [String] = ["24", "18", "15", "30"]
+    
+    @IBOutlet weak var lblWeather: UILabel!
+    @IBOutlet weak var imgWeather: UIImageView!
+    @IBOutlet weak var lblTemp: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +24,19 @@ class WeatherViewController: UIViewController {
     }
     
 
+    @IBAction func btnClick(_ sender: Any) {
+        self.onChangeBtnClick()
+    }
+    
+    private func onChangeBtnClick() {
+        lblWeather.text = cities.randomElement()!
+        imgWeather.image = UIImage(systemName: weather.randomElement()!)
+        lblTemp.text = temperature.randomElement()!
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
