@@ -97,7 +97,7 @@ iOSInjectionProject/
 Packages
 xcuserdata
 # *.xcodeproj
-
+*.DS_store
 
 ### Xcode ###
 
