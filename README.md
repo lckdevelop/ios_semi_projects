@@ -44,10 +44,15 @@
 </div>
 
 <p>
-  
-<figure class="third">
+
+<p align="center">
   <img src="https://user-images.githubusercontent.com/96190905/178134463-c867aab5-a275-44e8-a287-ca8ff4de7951.png" width="250" height="500">
+</p>
+<p align="center">
   <img src="https://user-images.githubusercontent.com/96190905/178134434-d9f334d0-e076-43d8-94c7-047f0b145fb8.png" width="250" height="500">
+</p>
+<p align="center">
   <img src="https://user-images.githubusercontent.com/96190905/178134440-7a44c217-e6e7-4230-8165-b8bdcf7335e1.png" width="250" height="500">
-</figure>
+</p>
+
   
