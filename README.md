@@ -1,7 +1,11 @@
 # ios_semi_projects
 
-<center> ### Project1: Weather</center>
 
+---
+
+### <center>Project1: Weather</center>
+
+<p>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/96190905/178131593-5c2ed255-ed4b-4331-a68c-cc5434941097.png" width="250" height="500">
 </p>
