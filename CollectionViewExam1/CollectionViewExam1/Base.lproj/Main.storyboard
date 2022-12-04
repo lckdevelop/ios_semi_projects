@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Focus View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FocusViewController" id="BYZ-38-t0r" customClass="FocusViewController" customModule="CollectionViewExam1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vgx-KC-VJj">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dVJ-KP-2fy">
+                                    <size key="itemSize" width="393" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FocusCell" id="DdM-ff-l1h" customClass="FocusCell" customModule="CollectionViewExam1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sL3-wE-ZtS">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today's calm day and weekend " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR4-0r-bfI">
+                                                    <rect key="frame" x="20" y="30" width="129.33333333333334" height="38.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbs-Am-fjc">
+                                                    <rect key="frame" x="20" y="78.333333333333343" width="188" height="62.333333333333343"/>
+                                                    <string key="text">Find the latest tips, advice, 
+news stories and videos 
+from the TODAY Show on NBC.
+</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-xB-YBv">
+                                                    <rect key="frame" x="243" y="-0.3333333333333286" width="150" height="151"/>
+                                                    <color key="tintColor" systemColor="systemCyanColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="1n1-kp-Rpp"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bR4-0r-bfI" firstAttribute="leading" secondItem="sL3-wE-ZtS" secondAttribute="leading" constant="20" id="12e-65-JFW"/>
+                                                <constraint firstItem="a1Q-xB-YBv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hbs-Am-fjc" secondAttribute="trailing" constant="30" id="D6C-tU-NUC"/>
+                                                <constraint firstItem="Hbs-Am-fjc" firstAttribute="top" secondItem="bR4-0r-bfI" secondAttribute="bottom" constant="10" id="TYE-Hg-BQG"/>
+                                                <constraint firstItem="Hbs-Am-fjc" firstAttribute="leading" secondItem="sL3-wE-ZtS" secondAttribute="leading" constant="20" id="XGr-ic-aYF"/>
+                                                <constraint firstAttribute="bottom" secondItem="a1Q-xB-YBv" secondAttribute="bottom" id="eGq-Uo-YEq"/>
+                                                <constraint firstItem="a1Q-xB-YBv" firstAttribute="top" secondItem="sL3-wE-ZtS" secondAttribute="top" id="f5I-lf-LSP"/>
+                                                <constraint firstItem="bR4-0r-bfI" firstAttribute="top" secondItem="sL3-wE-ZtS" secondAttribute="top" constant="30" id="gGb-Ue-uNy"/>
+                                                <constraint firstAttribute="trailing" secondItem="a1Q-xB-YBv" secondAttribute="trailing" id="isP-Oh-cIr"/>
+                                                <constraint firstItem="a1Q-xB-YBv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bR4-0r-bfI" secondAttribute="trailing" constant="30" id="xtO-s4-xSH"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Hbs-Am-fjc" secondAttribute="bottom" constant="30" id="zGt-Hw-exz"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="150"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="Hbs-Am-fjc" id="81l-Qm-gwr"/>
+                                            <outlet property="mainLabel" destination="bR4-0r-bfI" id="5b2-Zv-zWy"/>
+                                            <outlet property="weatherImage" destination="a1Q-xB-YBv" id="k6p-2c-ekU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vgx-KC-VJj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="T9S-xw-exe"/>
+                            <constraint firstItem="vgx-KC-VJj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X6v-2b-b5Z"/>
+                            <constraint firstItem="vgx-KC-VJj" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="pVr-AA-9DA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vgx-KC-VJj" secondAttribute="trailing" id="yZ8-k9-KVX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="vgx-KC-VJj" id="gyw-jh-RqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.rain" catalog="system" width="126" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
