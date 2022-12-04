@@ -9,21 +9,36 @@ import UIKit
 
 class BenefitListViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    typealias Item = AnyHashable
+    
+    enum Section {
+        case today
+        case other
+    }
+    
+    var datasource: UICollectionViewDiffableDataSource<Section, Item>!
+    
+    var todaySectionItems: [AnyHashable] = TodaySectionItem(point: .default, today: .today).sectionItems
+    var otherSectionItems: [AnyHashable] = [Benefit.others]
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        datasource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
+            
+            return nil
+            
+            
+        })
+            
         navigationItem.title = "혜택"
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
