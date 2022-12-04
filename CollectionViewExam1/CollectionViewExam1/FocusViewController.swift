@@ -10,8 +10,10 @@ import UIKit
 class FocusViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var refreshButton: UIButton!
     
-    let items:[Focus] = Focus.list
+    var items:[Focus] = Focus.list
+    var recommendStatus: Bool = false
     
     typealias Item = Focus
     
@@ -23,7 +25,7 @@ class FocusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        refreshButton.layer.cornerRadius = 10
         // presentation, data, layout
         
         //presentation
@@ -44,10 +46,26 @@ class FocusViewController: UIViewController {
         
        // layout
         collectionView.collectionViewLayout = layout()
-             
-
+        
+        recommendStatus = true
+        updateButtonTitle()
+        
     }
     
+    
+    @IBAction func refreshButtonOnClick(_ sender: Any) {
+        recommendStatus.toggle()
+        
+        self.items = recommendStatus ? Focus.list : Focus.recommendations
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(items, toSection: .main)
+        dataSource.apply(snapshot)
+        
+        
+        updateButtonTitle()
+    }
     
     private func layout() -> UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50))
@@ -57,9 +75,14 @@ class FocusViewController: UIViewController {
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
+        section.interGroupSpacing = 10
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-   
+    
+    private func updateButtonTitle() {
+        let title = recommendStatus ? "See Recommendation" : "See All"
+        refreshButton.setTitle(title, for: .normal)
+    }
 }

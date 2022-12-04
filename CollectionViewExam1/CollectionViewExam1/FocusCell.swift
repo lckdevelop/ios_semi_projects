@@ -12,6 +12,10 @@ class FocusCell: UICollectionViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
     
+    override func awakeFromNib() {
+        contentView.backgroundColor = UIColor.systemIndigo
+        contentView.layer.cornerRadius = 10
+    }
     func configureUI(_ item: Focus) {
         mainLabel.text = item.title
         descriptionLabel.text = item.description
